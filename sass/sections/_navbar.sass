@@ -20,7 +20,7 @@
         text-decoration: none
 
 .menu 
-    position: fixed
+    position: absolute // нужно fixed
     top: 80px
     z-index: 0
     left: 0
@@ -28,7 +28,7 @@
     padding: 16px 0
     background-color: $primary
     color: #ffffff  
-    transform: translateX(-100%)
+    transform: translateX(0%)
     &_active
         transform: translateY(0)
     &__nav
@@ -68,3 +68,25 @@
         display: block
         font-size: 14px
         color: $text-color-light
+
+@media (max-width: 991px)
+    .navbar
+       &__mobile, &__landline
+           display: none 
+
+@media (max-width: 667px)
+    .menu
+        &__link
+            font-size: 15px
+
+@media (max-width: 576px)
+    .logo
+        display: none 
+    .menu
+        position: absolute // нужно fixed
+        top: 80px
+        transform: translateY(0)
+        &__button 
+            height: 60px
+        &__nav
+            flex-direction: column

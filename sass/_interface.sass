@@ -8,6 +8,7 @@ body
     text-transform: uppercase
     color: $primary
     +bold
+    background: #ffffff
 .button
     border: none
     text-transform: uppercase
@@ -16,4 +17,11 @@ body
     background: $primary
     color: #f1f1f1
     +bold
-    
+@media (max-width: 576px)
+    .button-o
+        font-size: 11px
+
+@media (max-width: 375px)
+    .button-o
+        font-size: 10px
+        padding: 14px 20px
